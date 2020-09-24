@@ -22,6 +22,8 @@ spec:
         name: dock8sample
         resources: {}
 status: {}
+imagePullSecrets:
+  name: $KUBERNETES_SECRET_NAME
 ---
 apiVersion: v1
 kind: Service
@@ -41,5 +43,4 @@ spec:
   type: ClusterIP
 status:
   loadBalancer: {}
-imagePullSecrets:
-  name: $KUBERNETES_SECRET_NAME
+
